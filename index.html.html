@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Marry Me?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none; /* Added to remove underline */
+        }
+        .btn:hover {
+            background-color: #e60000;
+        }
+        .hearts {
+            font-size: 36px;
+            color: #ff4d4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Marry Me?</h1>
+       
+        <div>
+            <a class="btn" href="a1next.html">&#10004; Yes</a>
+            <button class="btn" type="button" onclick="reject()">No</button>
+        </div>
+        <div class="hearts">
+            &#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;
+        </div>
+       
+    </div>
+
+    <script>
+        function reject() {
+            alert("You don't have an option. I love you!");
+        }
+    </script>
+</body>
+</html>
