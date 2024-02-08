@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearts Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .heart {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            background-color: #ff4d4d;
+            border-radius: 50%;
+            animation: heartAnimation 5s linear infinite;
+        }
+        @keyframes heartAnimation {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(100vw, -100vh) scale(2);
+                opacity: 0;
+            }
+        }
+        .message {
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 20px;
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <p><b>Happy valentine's day baby,</b></p>
+         <div class="hearts">
+            &#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;
+        </div>
+        <p><b>I am lucky to have you in my life,</b></p>
+         <div class="hearts">
+            &#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;
+        </div>
+        <p><b>Together, we make every day feel like Valentine's Day.</b></p>
+         <div class="hearts">
+            &#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;
+        </div>
+        <p><b>I cherish every moment we spend together.</b></p>
+         <div class="hearts">
+            &#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;
+        </div>
+        <p><b>I love you more than words can express.</b></p>
+         <div class="hearts">
+            &#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;
+        </div>
+    </div>
+    <script>
+        // Function to create hearts at random positions
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "&#10084;"; // Heart symbol
+            heart.style.fontSize = "35px"; // Adjust size if necessary
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.top = Math.random() * window.innerHeight + "px";
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 5000); // Remove heart after 6 seconds
+        }
+
+        // Function to generate hearts periodically
+        function generateHearts() {
+            setInterval(createHeart, 1000); // Generate a heart every 0.5 second
+        }
+
+        // Start generating hearts when the page loads
+        window.onload = generateHearts;
+    </script>
+</body>
+</html>
